@@ -1,0 +1,163 @@
+@keyframes cafadein{
+0%{opacity:0%}
+100%{opacity:100%}
+}
+@keyframes cafadeout{
+0%{opacity:100%}
+100%{opacity:0%}
+}
+
+*{-webkit-tap-highlight-color:#00000000;
+transition: all 150ms;
+}
+body{letter-spacing: .3px;font-family: 'Google Sans','Noto Sans SC',sans-serif}
+
+.username,
+.UserCard-profile,
+.TagLabel{letter-spacing: 0!important}
+
+.Hero-close,
+span.TagLabel-text i{
+ display:none
+}
+
+.Hero h2 {font-size: 27px; font-weight: 700}
+
+.DiscussionListItem{
+   cursor: pointer;
+   transition: all 0.3s ease;
+   margin:20px
+}
+
+.TagTile,.DiscussionListItem,.Slidable-underneath,.DiscussionListItem-content
+{
+border-radius:10px!important;
+}
+
+.Notification,.Avatar{
+border-radius:5px
+}
+
+.Post-body{font-size:106%!important}
+
+.IndexPage .DiscussionListItem-info>.item-tags,.UserPage .DiscussionListItem-info>.item-tags{position:initial!important;-webkit-mask-image:none!important}
+
+.DiscussionListItem-info .item-excerpt{margin:2px 0 8px!important;font-size:13px!important;line-height:24px!important}
+
+.Post-body blockquote{border:0}
+
+.Post-body code{background:#484848;color:#f7f7f7;padding:2px}
+
+.Post-body pre{padding:15px;background:#f5f9fd;color:#3b4a61;font-size:80%;border-radius:0;overflow-wrap:break-word;border-left:2px solid #45556e}
+
+.TagLabel{
+font-weight:500!important;
+display:block;
+padding:0 4px!important;
+margin-right:5px;
+border-radius:4px
+}
+
+.DiscussionListItem-info .item-tags{
+position: relative;
+float:right
+}
+
+.Header-controls button,
+.Post-actions button,
+.item-session .Dropdown-toggle{
+border-radius: 5px;
+margin:.5px
+}
+
+@media (min-width: 767px){
+.PostUser-avatar{vertical-align:middle;position:relative;left:-7px;top:-2px;width:2.2em;height:2.2em;font-size:1em;line-height:2.2em}
+
+.PostUser-badges{float:left;position:relative;margin-left:10px;margin-right:15px;width:auto;max-width:60px;top: 6px}
+
+.App-header{
+backdrop-filter: blur(3px)}
+
+}
+
+@media (max-width: 767px){
+.dropdown-backdrop{
+animation: cafadein 0.3s;
+background: rgba(20,25,31,0.7)
+}
+
+.DiscussionListItem-content:active{
+background: rgba(0,0,0,0)
+}
+
+.drawer-backdrop:hover{
+animation: cafadeout 0.3s;
+background: rgba(20,25,31,0)
+}
+
+.Dropdown-menu{
+border-top-left-radius:10px!important;
+border-top-right-radius:10px!important
+}
+
+.Composer{
+border-bottom-left-radius:10px!important;
+border-bottom-right-radius:10px!important
+}
+
+.drawer-backdrop{
+background: rgba(20,25,31,0.7)
+}
+
+.PostUser-badges {position:absolute;top:-15px}
+
+.PostUser-avatar{
+position:relative;
+top: -1px
+}
+
+.DiscussionListItem-badges{
+position:relative;
+right: 25px
+}
+
+.App-navigation{
+backdrop-filter: blur(3px)
+}
+
+.TagTile{
+margin: 15px;
+}
+
+}
+body when (@config-dark-mode = false) {
+.DiscussionListItem{
+border: 1px solid #e4ecf3;
+}
+.DiscussionListItem:hover{
+   background: #ffffff00;
+   box-shadow: 0 26px 40px -24px rgba(0, 36, 100, .3);
+   transition: all 0.3s ease;}
+@media (max-width: 767px){
+.App-navigation{
+background: #ffffff99;
+transform: initial}
+   }
+@media (min-width: 767px){
+.App-header{
+background: #ffffff99;}
+   }
+}
+body when (@config-dark-mode = true) {
+.DiscussionListItem:active{background:#171d23!important}
+
+@media (max-width: 767px){
+.App-navigation{
+background:#14191f99}
+   }
+
+@media (min-width: 767px){
+.App-header{
+background:#14191f99;}
+   }
+}
