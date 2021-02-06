@@ -40,8 +40,6 @@ border-radius:5px
 
 .Post-body{font-size:106%!important}
 
-.IndexPage .DiscussionListItem-info>.item-tags,.UserPage .DiscussionListItem-info>.item-tags{position:initial!important;-webkit-mask-image:none!important}
-
 .DiscussionListItem-info .item-excerpt{margin:2px 0 8px!important;font-size:13px!important;line-height:24px!important}
 
 .Post-body blockquote{border:0}
@@ -134,18 +132,38 @@ body when (@config-dark-mode = false) {
 .DiscussionListItem{
 border: 1px solid #e4ecf3;
 }
+.CommentPost {
+    margin:10px;
+    margin-top:15px!important;
+    border-radius: 10px;
+    border: 1px solid #e4ecf3!important;
+}
+
+.PostStream-timeGap {
+    margin-top:15px!important;
+    border-top: 1px solid #e4ecf3!important;
+    border-bottom: 1px solid #e4ecf3!important;
+}
+
+.DiscussionPage-nav,.PostStream-item{
+border: 0!important
+}
 .DiscussionListItem:hover{
    background: #ffffff00;
-   box-shadow: 0 26px 40px -24px rgba(0, 36, 100, .3);
+   box-shadow: 0 26px 30px -24px rgba(0, 36, 100, .3);
    transition: all 0.3s ease;}
 @media (max-width: 767px){
 .App-navigation{
-background: #ffffff99;
+background: #ffffff97;
 transform: initial}
+
+.CommentPost {
+    margin:1px;
+    }
    }
 @media (min-width: 767px){
 .App-header{
-background: #ffffff99;}
+background: #ffffff97;}
    }
 }
 body when (@config-dark-mode = true) {
