@@ -2,10 +2,6 @@
 0%{opacity:0%}
 100%{opacity:100%}
 }
-@keyframes cafadeout{
-0%{opacity:100%}
-100%{opacity:0%}
-}
 
 *{-webkit-tap-highlight-color:#00000000;
 transition: all 150ms;
@@ -46,7 +42,7 @@ border-radius:5px
 
 .Post-body code{background:#484848;color:#f7f7f7;padding:2px}
 
-.Post-body pre{padding:15px;background:#f5f9fd;color:#3b4a61;font-size:80%;border-radius:0;overflow-wrap:break-word;border-left:2px solid #45556e}
+.Post-body pre{padding:15px;font-size:90%;border-radius:0;overflow-wrap:break-word}
 
 .TagLabel{
 font-weight:500!important;
@@ -59,6 +55,20 @@ border-radius:4px
 .DiscussionListItem-info .item-tags{
 position: relative;
 float:right
+}
+
+.CommentPost {
+    margin:10px;
+    margin-top:15px!important;
+    border-radius: 10px;
+}
+
+.DiscussionPage-nav,.PostStream-item{
+border: 0!important
+}
+
+.PostStream-timeGap {
+    margin-top:15px!important;
 }
 
 .Header-controls button,
@@ -80,7 +90,7 @@ backdrop-filter: blur(3px)}
 
 @media (max-width: 767px){
 .dropdown-backdrop{
-animation: cafadein 0.3s;
+animation: cafadein .3s;
 background: rgba(20,25,31,0.7)
 }
 
@@ -88,10 +98,9 @@ background: rgba(20,25,31,0.7)
 background: rgba(0,0,0,0)
 }
 
-.drawer-backdrop:hover{
-animation: cafadeout 0.3s;
-background: rgba(20,25,31,0)
-}
+.CommentPost {
+    margin:1px;
+    }
 
 .Dropdown-menu{
 border-top-left-radius:10px!important;
@@ -104,6 +113,7 @@ border-bottom-right-radius:10px!important
 }
 
 .drawer-backdrop{
+transition:.3s opacity!important;
 background: rgba(20,25,31,0.7)
 }
 
@@ -112,11 +122,6 @@ background: rgba(20,25,31,0.7)
 .PostUser-avatar{
 position:relative;
 top: -1px
-}
-
-.DiscussionListItem-badges{
-position:relative;
-right: 25px
 }
 
 .App-navigation{
@@ -133,28 +138,24 @@ body when (@config-dark-mode = false) {
 border: 1px solid #e4ecf3;
 }
 .CommentPost {
-    margin:10px;
-    margin-top:15px!important;
-    border-radius: 10px;
     border: 1px solid #e4ecf3!important;
 }
 
 .PostStream-timeGap {
-    margin-top:15px!important;
-    border-top: 1px solid #e4ecf3!important;
     border-bottom: 1px solid #e4ecf3!important;
 }
 
-.DiscussionPage-nav,.PostStream-item{
-border: 0!important
-}
+.Post-body pre{background:#f5f9fd;color:#3b4a61;border-left:3px solid #4D698E}
+
 .DiscussionListItem:hover{
    background: #ffffff00;
    box-shadow: 0 26px 30px -24px rgba(0, 36, 100, .3);
    transition: all 0.3s ease;}
+
+
 @media (max-width: 767px){
 .App-navigation{
-background: #ffffff97;
+background: #ffffff90;
 transform: initial}
 
 .CommentPost {
@@ -163,19 +164,26 @@ transform: initial}
    }
 @media (min-width: 767px){
 .App-header{
-background: #ffffff97;}
+background: #ffffff90;}
    }
 }
 body when (@config-dark-mode = true) {
 .DiscussionListItem:active{background:#171d23!important}
 
+.CommentPost{
+border: 1px solid #1b2028!important;
+}
+.PostStream-timeGap{
+border-bottom: 1px solid #1b2028!important;
+}
+
 @media (max-width: 767px){
 .App-navigation{
-background:#14191f99}
+background:#14191f95}
    }
 
 @media (min-width: 767px){
 .App-header{
-background:#14191f99;}
+background:#14191f95;}
    }
 }
