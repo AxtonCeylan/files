@@ -21,7 +21,7 @@ span.TagLabel-text i{
 
 .DiscussionListItem{
    cursor: pointer;
-   transition: all 0.3s ease;
+   transition: all 0.4s ease;
    margin:20px
 }
 
@@ -32,6 +32,15 @@ border-radius:10px!important;
 
 .Notification,.Avatar{
 border-radius:5px
+}
+
+.Dropdown-menu{
+border-top-left-radius:10px!important;
+border-top-right-radius:10px!important
+}
+
+.PostMention-preview{
+border-radius:10px!important;
 }
 
 .Post-body{font-size:106%!important}
@@ -63,8 +72,12 @@ float:right
     border-radius: 10px;
 }
 
-.DiscussionPage-nav,.PostStream-item{
+.DiscussionPage-nav,.PostStream-item,.PostsUserPage-list li{
 border: 0!important
+}
+
+.Avatar,.Post-header,.footer-container,.PostsUserPage-discussion{
+user-select: none
 }
 
 .PostStream-timeGap {
@@ -95,16 +108,11 @@ background: rgba(20,25,31,0.7)
 }
 
 .DiscussionListItem-content:active{
-background: rgba(0,0,0,0)
+background:#00000000
 }
 
 .CommentPost {
     margin:1px;
-    }
-
-.Dropdown-menu{
-border-top-left-radius:10px!important;
-border-top-right-radius:10px!important
 }
 
 .Composer{
