@@ -17,7 +17,9 @@ span.TagLabel-text i{
  display:none
 }
 
-.Hero h2 {font-size: 27px; font-weight: 700}
+.Hero{ background:url(/assets/herobg.png);}
+
+.Hero h2 {font-size: 27px; font-weight: 600}
 
 .DiscussionListItem{
    cursor: pointer;
@@ -55,10 +57,8 @@ border-radius:10px!important;
 
 .TagLabel{
 font-weight:500!important;
-display:block;
-padding:0 4px!important;
-margin-right:5px;
-border-radius:4px
+display:inline-block;
+padding:0 4px!important
 }
 
 .DiscussionListItem-info .item-tags{
@@ -67,7 +67,6 @@ float:right
 }
 
 .CommentPost {
-    margin:10px;
     margin-top:15px!important;
     border-radius: 10px;
 }
@@ -142,6 +141,7 @@ margin: 15px;
 
 }
 body when (@config-dark-mode = false) {
+
 .DiscussionListItem{
 border: 1px solid #e4ecf3;
 }
@@ -178,8 +178,14 @@ background: #ffffff90;}
 body when (@config-dark-mode = true) {
 .DiscussionListItem:active{background:#171d23!important}
 
+.Hero{color:#ddd}
+
 .CommentPost{
 border: 1px solid #1b2028!important;
+color: #ccc
+}
+.avatar{
+opacity: 90%
 }
 .PostStream-timeGap{
 border-bottom: 1px solid #1b2028!important;
